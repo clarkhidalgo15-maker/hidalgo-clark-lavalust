@@ -30,13 +30,13 @@ class StudentController extends Controller
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $viewer_name = trim($_POST['viewer_name'] ?? '');
 
-            if (strcasecmp($viewer_name, $data['name']) === 0) {
+            if ($viewer_name !== '') {
                 $_SESSION['student_access'] = true;
                 header('Location: ' . site_url('student/profile'));
                 exit;
             }
 
-            $data['access_message'] = 'Access denied. Enter the student name exactly as shown.';
+            $data['access_message'] = 'Please enter a name to continue.';
         }
 
         $this->call->view('student/home', $data);
