@@ -17,7 +17,7 @@ $escape = static function ($value) {
         .shell { position: relative; overflow: hidden; width: min(1100px, calc(100% - 40px)); margin: 34px auto; background: var(--paper); border: 2px solid var(--ink); border-radius: 8px; box-shadow: 14px 14px 0 var(--yellow); animation: rise .65s ease both; }
         header { display: flex; justify-content: space-between; align-items: center; padding: 24px 30px; border-bottom: 2px solid var(--ink); }
         .brand { display: flex; gap: 12px; align-items: center; font-weight: 800; letter-spacing: .02em; }
-        .mark { display: grid; place-items: center; width: 42px; height: 42px; background: var(--yellow); border: 2px solid var(--ink); border-radius: 50%; font: 900 14px Arial, sans-serif; }
+        .mark { display: grid; place-items: center; width: 42px; height: 42px; overflow: hidden; background: var(--yellow); border: 2px solid var(--ink); border-radius: 50%; font: 900 14px Arial, sans-serif; } .mark img { width: 100%; height: 100%; object-fit: cover; }
         nav { display: flex; gap: 10px; } nav a { color: var(--ink); text-decoration: none; border: 1px solid var(--ink); border-radius: 5px; padding: 10px 14px; font: 700 14px Arial, sans-serif; transition: .2s ease; }
         nav a:hover { background: var(--yellow); transform: translateY(-2px); }
         main { display: grid; grid-template-columns: 1.1fr .9fr; gap: 56px; padding: 82px 72px 92px; }
@@ -39,7 +39,7 @@ $escape = static function ($value) {
 </head>
 <body>
 <div class="shell">
-    <header><div class="brand"><span class="mark">CD</span><span>CLARK'S STUDENT DESK</span></div><nav><a href="<?= $escape(site_url('student')) ?>">Home</a></nav></header>
+    <header><div class="brand"><span class="mark"><img src="<?= $escape(base_url('images/clark-profile.jpg')) ?>?v=0bf894b" alt=""></span><span>CLARK'S STUDENT DESK</span></div><nav><a href="<?= $escape(site_url('student')) ?>">Home</a></nav></header>
     <main>
         <section class="hero"><span class="eyebrow">STUDENT INFORMATION</span><h1>Welcome,<br>Clark Denver.</h1><p class="intro">A bright little corner for the essential details of a BS Information Technology student.</p><div class="mini-note">MCC / 3F4 / 3rd year</div></section>
         <section class="panel"><h2>Profile access</h2><p>Verify the student name to open the full profile.</p><?php if ($access_message): ?><div class="notice"><?= $escape($access_message) ?></div><?php endif; ?><form method="post"><label for="viewer_name">STUDENT NAME</label><input id="viewer_name" name="viewer_name" type="text" placeholder="Clark Denver F. Hidalgo" required><button type="submit">Open student profile</button></form></section>
