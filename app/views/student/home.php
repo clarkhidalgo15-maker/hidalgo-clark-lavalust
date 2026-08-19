@@ -39,7 +39,7 @@ $escape = static function ($value) {
 </head>
 <body>
 <div class="shell">
-    <header><div class="brand"><span class="mark"><img src="<?= $escape(site_url('images/clark-profile.jpg')) ?>" alt="" onerror="this.style.display='none'; this.parentElement.textContent='CD';"></span><span>CLARK'S STUDENT DESK</span></div><nav><a href="<?= $escape(site_url('student')) ?>">Home</a></nav></header>
+    <header><div class="brand"><span class="mark"><img src="<?= $escape(site_url('images/clark-profile.jpg')) ?>?v=ad5be59" alt="" onerror="this.style.display='none'; this.parentElement.textContent='CD';"></span><span>CLARK'S STUDENT DESK</span></div><nav><a href="<?= $escape(site_url('student')) ?>">Home</a></nav></header>
     <main>
         <section class="hero"><span class="eyebrow">STUDENT INFORMATION</span><h1>Welcome,<br>Clark Denver.</h1><p class="intro">A bright little corner for the essential details of a BS Information Technology student.</p><div class="mini-note">MCC / 3F4 / 3rd year</div></section>
         <section class="panel"><h2>Profile access</h2><p>Verify the student name to open the full profile.</p><?php if ($access_message): ?><div class="notice"><?= $escape($access_message) ?></div><?php endif; ?><form method="post"><label for="viewer_name">STUDENT NAME</label><input id="viewer_name" name="viewer_name" type="text" placeholder="Clark Denver F. Hidalgo" required><button type="submit">Open student profile</button></form></section>
