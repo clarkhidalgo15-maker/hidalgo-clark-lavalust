@@ -17,8 +17,7 @@ class StudentController extends Controller
             'section' => '3F4',
             'email' => 'hidalgoclark 50@gmail.com',
             'address' => 'Poblacion, Baco, Oriental Mindoro',
-            'contact' => '+63 948 540 7913',
-            'facebook' => 'https://www.facebook.com/share/1ECC1BTbi7/'
+            'contact' => '+63 948 540 7913'
         ];
     }
 
