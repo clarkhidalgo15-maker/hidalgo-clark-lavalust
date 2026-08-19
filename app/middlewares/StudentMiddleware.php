@@ -10,6 +10,7 @@ class StudentMiddleware
     public function handle(Closure $next)
     {
         if (!empty($_SESSION['student_access'])) {
+            unset($_SESSION['student_access']);
             return $next();
         }
 
