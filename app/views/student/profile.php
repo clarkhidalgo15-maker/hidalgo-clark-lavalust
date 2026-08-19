@@ -31,6 +31,6 @@ $details = [
 </head>
 <body><div class="shell">
     <header><div class="brand"><span class="mark">CD</span><span>CLARK'S STUDENT DESK</span></div><nav><a href="<?= $escape(site_url('student')) ?>">Home</a></nav></header>
-    <main><span class="eyebrow">VERIFIED PROFILE / 2026</span><h1>Student profile</h1><div class="layout"><aside class="identity"><div class="initials">CDH</div><h2><?= $escape($name) ?></h2><span class="badge">BS INFORMATION TECHNOLOGY</span></aside><section class="details"><?php foreach ($details as $label => $value): ?><div class="item<?= $label === 'Address' ? ' wide' : '' ?>"><span class="label"><?= $escape($label) ?></span><span class="value"><?= $escape($value) ?></span></div><?php endforeach; ?></section></div></main>
+    <main><h1>Student profile</h1><div class="layout"><aside class="identity"><div class="initials">CDH</div><h2><?= $escape($name) ?></h2><span class="badge">BS INFORMATION TECHNOLOGY</span></aside><section class="details"><?php foreach ($details as $label => $value): ?><div class="item<?= $label === 'Address' ? ' wide' : '' ?>"><span class="label"><?= $escape($label) ?></span><span class="value"><?= $escape($value) ?></span></div><?php endforeach; ?></section></div></main>
 </div></body>
 </html>
